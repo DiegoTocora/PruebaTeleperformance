@@ -1,0 +1,14 @@
+<div class="row d-flex justify-content-center">
+  <nb-card class="col-md-3 col-sm-5 col-10 m-2" *ngFor="let item of postFiltered?.data">
+    <nb-card-body>
+      <div class="row">
+        <img class="col-6" [src]="item.avatar" alt="">
+        <div class="col-6">
+          <div class="card-title">{{item.first_name| namePipe}}</div>
+          <div class="card-title">{{item.last_name| lastNamePipe}}</div>
+          <button nbButton (click)="openModal(item.id)" class="mt-5"> perfil</button>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+</div>

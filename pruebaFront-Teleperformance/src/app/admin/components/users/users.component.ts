@@ -48,7 +48,7 @@ export class UsersComponent implements OnInit {
   }
   searchUserByName(userName: string) {
 
-    this.postFiltered.data = this.posts.data.filter(user => user.first_name.toLocaleLowerCase().includes(userName));
+    this.postFiltered.data = this.posts.data.filter(user => user.first_name.toLocaleLowerCase().startsWith(userName));
   }
 
   openModal(id: number) {
